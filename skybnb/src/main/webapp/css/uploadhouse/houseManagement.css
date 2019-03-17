@@ -1,0 +1,23 @@
+@charset "UTF-8";
+img{
+border-radius: 10px;
+}
+.calendar {
+	margin-left: 0.45rem
+}
+
+#home {
+	margin-left: -0.1rem
+}
+
+.home {
+	margin-left: 0.35rem
+}
+
+#dollar {
+	margin-left: 0.13rem;
+}
+
+.dollar {
+	margin-left: 0.65rem;
+}

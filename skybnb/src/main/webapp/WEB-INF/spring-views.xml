@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--	登入登出		-->
+	<bean id="login.member" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/index.jsp"/>
+	</bean>
+	<bean id="login.administrator" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/login.jsp"/>
+	</bean>
+	<bean id="login.error" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/login.jsp"/>
+	</bean>
+	<bean id="logout.success" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/index.jsp"/>
+	</bean>
+	
+	<!--	房源搜尋		-->
+	<bean id="searchresult.controller" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="searchResult.jsp"/>
+	</bean>
+	
+	<!--	預定房源		-->
+	<bean id="order.error" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/orderHouse.jsp"/>
+	</bean>
+	<bean id="order.success" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/orderHouseCheck.jsp"/>
+	</bean>
+	
+	<!--	客訴回報		-->
+	<bean id="report.error" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/customerReport.jsp"/>
+	</bean>
+	<bean id="report.success" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/reportSuccess.jsp"/>
+	</bean>
+	
+	<!--	註冊		-->	
+		<bean id="insert.error" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/register.jsp"/>
+	</bean>
+	<bean id="insert.success" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/index.jsp"/>
+	</bean>	
+	
+	<!--	上架房屋		-->
+	<bean id="upload"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="uploadHouse.jsp" />
+	</bean>
+	<bean id="upload.success"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="uploadSuccess.jsp" />
+	</bean>	
+	
+	<!--	房屋	管理		-->
+	<bean id="manage"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="houseManagement.jsp" />
+	</bean>
+	
+	<!--	編輯基本資料		-->
+	<bean id="readyupdatemember.success" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/updateMember.jsp"/>
+	</bean>		
+	<bean id="update.success" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/alreadyUpdate.jsp"/>
+	</bean>
+	
+	<!--	精選國家		-->
+	<bean id="searchresult.wellChoosen" class="org.springframework.web.servlet.view.InternalResourceView">
+  		<property name="url" value="wellChosen.jsp"/>
+ 	</bean>
+	
+	<!--	訂單明細		-->
+	<bean id="orderlistselect.servlet" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/orderlistselect.jsp"/>
+	</bean>
+	<bean id="orderlistdetail.servlet" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/orderlistdetail.jsp"></property>
+	</bean>
+	<bean id="Score.servlet" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/Score.jsp"></property>
+	</bean>
+	
+	<!--	願望清單		-->
+	<bean id="wishlist"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="wishList.jsp" />
+	</bean>
+	
+	<!--	編輯房屋		-->
+	<bean id="change.success"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="changeSuccess.jsp" />
+	</bean>
+	<bean id="change"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="changeHouse.jsp" />
+	</bean>
+	
+	<!--	預覽房屋		-->
+	<bean id="preview"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="housePreview.jsp" />
+	</bean>
+</beans>

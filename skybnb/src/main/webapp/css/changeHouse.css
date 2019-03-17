@@ -1,0 +1,73 @@
+@charset "UTF-8";
+img {
+	border-radius: 10px;
+}
+
+#stepBar1 {
+	margin-left: 260px;
+	margin-bottom: 10px;
+}
+
+#stepBar2 {
+	margin-left: 300px;
+	margin-bottom: 10px;
+}
+
+#stepBar3 {
+	margin-left: 300px;
+	margin-bottom: 10px;
+}
+
+#stepBar4 {
+	margin-left: 300px;
+	margin-bottom: 10px;
+}
+
+.thumb {
+	height: 150px;
+	margin: 5px;
+}
+
+@media ( min-width : 768px) {
+	.field-label-responsive {
+		margin-left: 0px;
+		padding-top: .5rem;
+		text-align: right;
+	}
+}
+
+.label {
+	margin-top: 1rem;
+}
+
+.input-group-addon {
+	margin-top: 0.6rem;
+}
+
+.form-control {
+	margin-top: 6px;
+}
+
+#imageUploadBox {
+	margin-left: 130px;
+}
+
+#imgaeFormTitle {
+	margin-left: 150px;
+}
+
+.btn-file {
+	margin-top: 0.35rem;
+}
+
+.fileinput-remove {
+	margin-top: 0.35rem;
+}
+
+#dateBox {
+	margin-left: 300px;
+}
+
+#disableDate {
+	margin-left: 300px;
+}

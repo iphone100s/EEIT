@@ -1,0 +1,78 @@
+* {
+	
+font-family: 微軟正黑體;
+	
+}
+
+.nav-link {
+	font-size: 20px;
+}
+
+/*table*/
+.center{
+  width: 90%;
+  display: table;
+  margin-left: auto; 
+  margin-right: auto; 
+  border: 1px none #CFCFCF; 
+  border-radius:7px;   
+  box-shadow:3px 3px 12px #787878;
+   
+   
+}
+.table th{
+	border: 1px solid #C9C9C9;
+	background-color:#A1A1A1;
+	color:#FAFAFA;
+	text-align:center;
+	
+	white-space:nowrap;
+	 
+}
+.table td{
+border-bottom: 1px solid #C9C9C9; 
+/*     border: 1px solid #C9C9C9; */ 
+white-space:nowrap;
+text-align:center;
+}
+
+.table{
+	border-collapse: separate;
+	border-spacing: 0;	
+}
+/*titile*/
+#text{
+	float: left;
+	font-size: 200%;
+	font-family: Microsoft JhengHei;
+	margin-left: 2%;
+}
+#mapicon{
+ 	float:left;  
+	maring:2%;
+	width:8%;
+}
+#title{
+	float: left;
+    margin-left: 5%;
+    margin-bottom: 0.5%;
+    margin-top: 4%;
+    text-align: left;
+	
+}
+/*第一欄第一列：左上*/
+tr:first-child th:first-child{
+  border-top-left-radius: 7px;
+}
+/*第一欄最後列：左下*/
+tr:last-child td:first-child{
+  border-bottom-left-radius: 7px;
+}
+/*最後欄第一列：右上*/
+tr:first-child th:last-child{
+  border-top-right-radius: 7px;
+}
+/*最後欄第一列：右下*/
+tr:last-child td:last-child{
+  border-bottom-right-radius:7px;
+}

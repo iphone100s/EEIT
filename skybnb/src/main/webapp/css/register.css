@@ -1,0 +1,14 @@
+ #result{
+             width: 200px; 
+             height:200px; 
+             border:1px solid #eee; 
+        }
+        #result img{
+            width: 200px;
+/* 			上傳圖片後的尺寸大小 */
+        }
+        input{
+            width: 70px;
+            margin-top: 10px;
+        }
+        @-moz-document url-prefix() { input { width:65px; } }/*单独对火狐进行设置*/

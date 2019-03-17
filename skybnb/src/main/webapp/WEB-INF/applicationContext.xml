@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="dataSource"
+		class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/skybnb"></property>
+	</bean>
+
+	<bean id="sessionFactory" destroy-method="destroy"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+<!-- 		<property name="configLocation" -->
+<!-- value="classpath:hibernate.cfg.xml"></property> -->
+			<property name="hibernateProperties">
+				<props>
+					<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+					<prop key="show_sql">true</prop>
+					<prop key="hibernate.current_session_context_class">thread</prop>
+				</props>
+			</property>
+			<property name="annotatedClasses">
+				<list>
+					<value>model.bean.OrderHouseBean</value>
+					<value>model.bean.MemberBean</value>
+					<value>model.bean.HouseInformationBean</value>
+					<value>model.bean.CustomerReportBean</value>
+					<value>model.bean.WishListBean</value>
+				</list>
+			</property>
+	</bean>
+
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="model.bean,model.dao.hibernate,model.service"></context:component-scan>
+
+
+</beans>
